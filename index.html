@@ -7,7 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="icon" href="/images/wppusher-logo copylogo.png" type="image/png">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Josefin+Sans:wght@100&family=Josefin+Slab:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <title>WP Pusher</title>
     <link rel="stylesheet" href="/assets/style.css">
@@ -17,16 +19,22 @@
         <header>
             <nav>
                 <div class="logo">
-                    <img src="/images/wppusher-logo copylogo.png" alt="WP Pusher Logo">
+                    <a href="index.html"><img src="/images/wppusher-logo copylogo.png" alt="WP Pusher Logo"></a>
                 </div>
                 <div class="nav-link">
-                    <ul>
+                    <ul class="nav-menu">
                         <li><a href="#">download</a></li>
                         <li><a href="#">Learn more</a></li>
                         <li><a href="#">pricing</a></li>
                         <li><a href="#">help</a></li>
-                        <li><a href="#" class="active">account</a></li>
+                        <li class="active"><a href="#">account</a></li>
                     </ul>
+                </div>
+                <div class="ham-container">
+                    <button id="hamburger">
+                        <span></span>
+                        <span></span>
+                    </button>
                 </div>
             </nav>
         </header>
@@ -34,54 +42,54 @@
             <div class="section-content">
                 <div class="checkout">
                     <div class="checkout-content">
-                        <span id="checkput-header">
+                        <div class="checkout-header">
                             <h2>checkout</h2>
-                        </span>
+                        </div>
                         <div class="info">
                             <div class="info-flex">
-                                <span>
+                                <span id="number">
                                     <p>1</p>
                                 </span>
                                 <span>
-                                    <h1>your basic information</h1>
+                                    <p><b>your basic information</b></p>
                                 </span>
                             </div>
-                            <form action="#" class="form">
+                            <form action="#" class="form" autocomplete="on">
                                 <div class="input-control">
-                                    <label for="firstName">first name</label>
+                                    <label for="firstName">first name</label><br>
                                     <input type="text" id="firstName" placeholder="jane" pattern="[A-Za-z]{3,}" required>
                                 </div>
 
                                 <div class="input-control">
-                                    <label for="lastName">last name</label>
+                                    <label for="lastName">last name</label><br>
                                     <input type="text" id="lastName" placeholder="Doe" pattern="[A-Za-z]{3,}" required>
                                 </div>
 
                                 <div class="input-control">
-                                    <label for="firstName">first name</label>
-                                    <input type="email" id="firstName" placeholder="janedoe@example.com" required>
+                                    <label for="email">email</label><br>
+                                    <input type="email" id="email" placeholder="janedoe@example.com" required>
                                 </div>
                             </form>
                         </div>
                         <div class="info">
                             <div class="info-flex">
-                                <span>
+                                <span id="number">
                                     <p>2</p>
                                 </span>
                                 <span>
-                                    <h1>your payment information</h1>
+                                    <p><b>your payment information</b></p>
                                 </span>
                             </div>
                             <div class="input-control">
-                                <label for="creditCard">credit card</label>
+                                <label for="creditCard" id="creditCard">credit card</label>
                                 <div class="input-flex">
-                                    <input type="number" id="cardNumber">
-                                    <input type="number" id="expiry">
-                                    <input type="number" id="cvc">
+                                    <input type="tel" id="cardNumber" placeholder="Card Number">
+                                    <input type="tel" id="expiry"placeholder="MM / YY">
+                                    <input type="tel" id="cvc" placeholder="CVC">
                                 </div>
                             </div>
                         </div>
-                        <button type="submit">buy wp pusher</button>
+                        <button type="submit">buy WP pusher</button>
                         <div class="checkout-footer">
                             <span class="material-symbols-outlined help">
                                 help
@@ -95,12 +103,15 @@
                         </span>
                     </div>
                 </div>
+
                 <aside>
                     <div class="aside-content">
                         <div class="first-content">
                             <h3>freelancer</h3>
-                            <sup>$</sup><p>99</p><sub>/year</sub>
-                            <p>Automatically renews after 1 year</p>
+                            <div class="price">
+                                $<span class="sup">99</span><span class="sub">/year</span>
+                            </div>
+                            <p id="renew">Automatically renews after 1 year</p>
                             <div class="aside-flex">
                                 <span>
                                     <i class="fa-solid fa-check"></i>
@@ -115,7 +126,7 @@
                                     <p>Email support</p>
                                 </span>
                             </div>
-                            <p>Need <b>20</b> client sites?</p>
+                            <p id="client">Need <b>20</b> client sites?</p>
                             <a href="#">Switch to the Agency plan</a>
                         </div>
                         <div class="second-content">
@@ -138,4 +149,5 @@
         </section>
     </main>
 </body>
+<script src="/assets/js/script.js"></script>
 </html>
